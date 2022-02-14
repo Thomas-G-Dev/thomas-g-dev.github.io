@@ -9,7 +9,10 @@
     --third: #696969;
 }
 
-*::-webkit-scrollbar {
+*::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+    background-color: transparent;
     width: 0px;
 }
 
