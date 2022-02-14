@@ -342,7 +342,7 @@ section{
 
 @media screen and (max-width: 920px) {
     :root{
-        --padding:2rem;
+        --padding:.2rem;
     }
 
     .flex{
