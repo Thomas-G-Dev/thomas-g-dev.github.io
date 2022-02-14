@@ -5,6 +5,7 @@
     --secondary: #108e8c;
     --text: #FFFFFF;
     --padding: 4rem;
+    --padding-footer: 2rem;
     --third: #696969;
 }
 
@@ -30,6 +31,12 @@ body {
     color: var(--text);
 }
 
+main{
+    /* padding-top: calc(var(--padding) + 2rem); */
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
+
 a{
     text-decoration: none;
     color: var(--text);
@@ -39,7 +46,15 @@ a:hover{
     opacity: 0.5;
 }
 
+.link-color{
+    border-bottom: 2px solid var(--secondary);
+}
+
 nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(18,18,18,.9);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -131,11 +146,27 @@ nav li{
     color: var(--text);
 }
 
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    padding-top: calc(var(--padding) + 2rem);
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start ;
+}
+
 .content{
+    margin-top: 1rem;
+}
+
+.flex{
     display: flex;
     flex-direction: row;
-    padding-left: var(--padding);
-    padding-right: var(--padding);
 }
 
 .left-content{
@@ -149,8 +180,8 @@ nav li{
     width: 100%;
     font-size: 5vw;
     font-weight: bold;
-    margin-bottom: 0;
-    margin-top: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .left-text{
@@ -168,7 +199,7 @@ nav li{
 .right-content{
     margin-left: auto;
     text-align: center;
-    width: 50%;
+    width: 45vw;
     height: auto;
     background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("/img/thomas.png");
     background-size: cover;
@@ -235,6 +266,34 @@ nav li{
     cursor: pointer;
 }
 
+#sportplus h1{
+    font-size: 3vw;
+    text-align: center;
+    align-self: center;
+}
+
+.flex img{
+    width: 50%;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.text h2{
+    font-size: 2.1vw;
+    align-self: center;
+    text-align: center;
+}
+
+.text p{
+    font-size: 1vw;
+}
+
 @media screen and (max-width: 1070px) {
     nav{
         display: block;
@@ -278,16 +337,48 @@ nav li{
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
     :root{
-        --padding:2rem
+        --padding:2rem;
     }
 
-    .content{
+    .flex{
         margin-top: 10px;
-        flex-direction: column-reverse;
-        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .flex img{
+        width: 100%;
+    }
+
+    .column-reverse{
+        flex-direction: column-reverse;
+    }
+    
+    #sportplus h1{
+        font-size: 2rem;
+        text-align: center;
+        align-self: center;
+    }
+    
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding: 0;
+        padding-top: 2rem;
+    }
+    
+    .text h2{
+        font-size: 1.1rem;
+        align-self: center;
+        text-align: center;
+    }
+    
+    .text p{
+        font-size: 1rem;
     }
 
     .left-content{
@@ -295,18 +386,25 @@ nav li{
     }
 
     .left-content h1{
-        font-size: 6vw;
+        font-size: 7vw;
         text-align: center;
+        padding-top: var(--padding-footer);
     }
 
     .left-text{
         width: 100%;
+        padding-top: var(--padding-footer);
+    }
+
+    .left-btn{
+        justify-content: center;
+        padding-top: var(--padding-footer);
     }
 
     .right-content{
         text-align: center;
         width: 100%;
-        height: 100%;
+        height: 25vh;
         background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("/img/thomas.png");
         background-size: cover;
         background-position-y: 25%;
@@ -314,8 +412,8 @@ nav li{
 
     .footer-main{
         width: 100%;
-        padding-bottom: 20px;
         justify-content: space-between;
+        padding-top: var(--padding-footer);
     }
 
     .footer-main ul{
@@ -336,5 +434,21 @@ nav li{
 
     .btn{
        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-height: 820px) {
+    :root{
+        --padding-footer: 1rem;
+    }
+
+    .right-content{
+        text-align: center;
+        width: 100%;
+        height: 15vh;
+        border-radius: 0;
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("/img/thomas.png");
+        background-size: cover;
+        background-position-y: 20%;
     }
 }
