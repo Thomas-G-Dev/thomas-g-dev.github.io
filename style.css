@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root{
+    --main: rgb(18,18,18);
+    --secondary: #108e8c;
+    --text: #FFFFFF;
+    --padding: 4rem;
+    --padding-footer: 2rem;
+    --third: #696969;
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+* {
+box-sizing: border-box;
+}
+
+html {
+    font-size: 1.2rem;
+    font-family: "Quicksand", sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--main);
+    color: var(--text);
+}
+
+main{
+    /* padding-top: calc(var(--padding) + 2rem); */
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
+
+a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+a:hover{
+    opacity: 0.5;
+}
+
+.link-color{
+    border-bottom: 2px solid var(--secondary);
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(18,18,18,.9);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
+
+.nav-title{
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+}
+
+.nav-logo{
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--text);
+    border-radius: 100%;
+    background-image: url("/img/logo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.nav-logo img{
+    width: 100%;
+}
+
+.nav-nom{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px ;
+}
+
+.nav-nom p{
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.navbar-button .bar {
+height: 3px;
+width: 100%;
+background-color: var(--text);
+border-radius: 10px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav li{
+    padding: 1rem;
+}
+
+.nav-li.toggle {
+    display: flex;
+}
+
+.nav-search{
+    display: flex;
+    align-self: center;
+    border: 2px solid var(--text);
+    opacity: 0.7;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.nav-search input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    color: var(--text);
+}
+.nav-search input::placeholder{
+    color: var(--text);
+}
+
+.nav-search a{
+    padding: 10px;
+    color: var(--text);
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    padding-top: calc(var(--padding) + 2rem);
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start ;
+}
+
+.content{
+    margin-top: 1rem;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-content{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-content h1{
+    width: 100%;
+    font-size: 5vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.left-text{
+    display: flex;
+    width: auto;
+    padding-top: 50px;
+}
+
+.left-btn{
+    display: flex;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.right-content{
+    margin-left: auto;
+    text-align: center;
+    width: 45vw;
+    height: auto;
+    background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("img/thomas.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.bar-text{
+    width: 25px;
+    height: 1px;
+    margin-bottom: 5px;
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 50px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    display: inline-block;    
+}
+
+.btn{
+    padding: 15px;
+    border-radius: 15px;    
+}
+
+.btn-colored{
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+.btn-transparent{
+    background-color: var(--main);
+    color: var(--text);
+}
+
+.footer-main{
+    display: flex;
+    padding-top: 50px;
+}
+
+.footer-title{
+    align-self: center;
+}
+
+.footer-main ul{
+    display: flex;
+    list-style: none;
+    align-self: center;
+    margin: 0;
+}
+
+.footer-main li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin: 10px;
+    background-color: rgb(231, 226, 226);
+    border-radius: 100%;
+}
+
+.footer-main li a{
+    color: var(--main);
+    cursor: pointer;
+}
+
+#sportplus h1{
+    font-size: 3vw;
+    text-align: center;
+    align-self: center;
+}
+
+.flex img{
+    width: 50%;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.text h2{
+    font-size: 2.1vw;
+    align-self: center;
+    text-align: center;
+}
+
+.text p{
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 1070px) {
+    nav{
+        display: block;
+    }
+
+    .nav-title{
+        padding-top: 0.5rem;
+        flex-direction: row-reverse;
+    }
+
+    .nav-title div:nth-child(2){
+        order: 1;
+    }
+
+    .nav-title div:nth-child(3){
+        margin-right: auto;
+    } 
+    
+    .navbar-button {
+        display: flex;
+        align-self: center;
+    }
+
+    .nav-li {
+        display: none;
+        width: 100%;    
+    }
+
+    .nav-search{
+        display: none;
+    }
+
+    .nav-li ul {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-li li {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    :root{
+        --padding:2rem;
+    }
+
+    .flex{
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex img{
+        width: 100%;
+    }
+
+    .column-reverse{
+        flex-direction: column-reverse;
+    }
+    
+    #sportplus h1{
+        font-size: 2rem;
+        text-align: center;
+        align-self: center;
+    }
+    
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding: 0;
+        padding-top: 2rem;
+    }
+    
+    .text h2{
+        font-size: 1.1rem;
+        align-self: center;
+        text-align: center;
+    }
+    
+    .text p{
+        font-size: 1rem;
+    }
+
+    .left-content{
+        width: 100%;
+    }
+
+    .left-content h1{
+        font-size: 7vw;
+        text-align: center;
+        padding-top: var(--padding-footer);
+    }
+
+    .left-text{
+        width: 100%;
+        padding-top: var(--padding-footer);
+    }
+
+    .left-btn{
+        justify-content: center;
+        padding-top: var(--padding-footer);
+    }
+
+    .right-content{
+        text-align: center;
+        width: 100%;
+        height: 25vh;
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("img/thomas.png");
+        background-size: cover;
+        background-position-y: 25%;
+    }
+
+    .footer-main{
+        width: 100%;
+        justify-content: space-between;
+        padding-top: var(--padding-footer);
+    }
+
+    .footer-main ul{
+        padding: 0;
+    }
+
+    .footer-main li{
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 10px;
+        background-color: rgb(231, 226, 226);
+        border-radius: 100%;
+    }
+
+    .footer-title{
+        font-size: 1.1rem;
+    }
+
+    .btn{
+       font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-height: 820px) {
+    :root{
+        --padding-footer: 1rem;
+    }
+
+    .right-content{
+        text-align: center;
+        width: 100%;
+        height: 15vh;
+        border-radius: 0;
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("img/thomas.png");
+        background-size: cover;
+        background-position-y: 20%;
+    }
+}
