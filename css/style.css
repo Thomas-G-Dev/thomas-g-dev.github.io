@@ -9,7 +9,10 @@
     --third: #696969;
 }
 
-*::-webkit-scrollbar {
+*::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+    background-color: transparent;
     width: 0px;
 }
 
@@ -201,7 +204,7 @@ section{
     text-align: center;
     width: 45vw;
     height: auto;
-    background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("/img/thomas.png");
+    background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("img/thomas.png");
     background-size: cover;
     background-position: center;
     border-radius: 100%;
@@ -405,7 +408,7 @@ section{
         text-align: center;
         width: 100%;
         height: 25vh;
-        background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("/img/thomas.png");
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("img/thomas.png");
         background-size: cover;
         background-position-y: 25%;
     }
@@ -447,7 +450,7 @@ section{
         width: 100%;
         height: 15vh;
         border-radius: 0;
-        background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("/img/thomas.png");
+        background: linear-gradient(to bottom, rgba(18,18,18,0) 50%, rgba(18,18,18,1) 100%), url("img/thomas.png");
         background-size: cover;
         background-position-y: 20%;
     }
